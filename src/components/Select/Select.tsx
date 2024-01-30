@@ -70,6 +70,7 @@ export const Select: FunctionComponent<SelectProps> = (props) => {
 
 
   return (
+    <>
     <div 
       ref={containerRef}
       onBlur={() => setIsOpen(false)}
@@ -78,19 +79,8 @@ export const Select: FunctionComponent<SelectProps> = (props) => {
       className={styles.container}
     >
       <span className={styles.value}>
-        {props.multiple ? props.value.map((val) => (
-          <button 
-            key={val.value} 
-            onClick={e =>{
-              e.stopPropagation
-              selectOption(val)
-            }}
-            className={styles["option-badge"]}
-            >
-              {val.label}
-              <span className={styles["remove-btn"]}>&times;</span>
-          </button>
-        )) : props.value?.label}
+
+        {props.multiple ? (props.value.length !== 0 ? props.value[props.value.length - 1].label : "------") : props.value?.label}
         </span>
       <button 
         onClick={e => {
@@ -118,5 +108,23 @@ export const Select: FunctionComponent<SelectProps> = (props) => {
         ))}
       </ul>
     </div>
+
+    {/* Multiple labels */}
+        <div className={`${styles.value} ${styles["multival-container"]}`}>
+      {props.multiple ? props.value.map((val) => (
+          <button 
+            key={val.value} 
+            onClick={e =>{
+              e.stopPropagation
+              selectOption(val)
+            }}
+            className={styles["option-badge"]}
+            >
+              {val.label}
+              <span className={styles["remove-btn"]}>&times;</span>
+          </button>
+        )) : ""}
+    </div>
+    </>
   );
 }

@@ -11,6 +11,7 @@
   width: 100dvw;
   height: 100dvh;
   display: flex;
+  gap: 2em;
   place-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;

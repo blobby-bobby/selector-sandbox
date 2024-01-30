@@ -16,6 +16,11 @@
     border-color: #5A4698;
 }
 
+.multival-container {
+    padding: .5rem 0;
+    width: 20em;
+}
+
 .value {
     flex-grow: 1;
     display: flex;
