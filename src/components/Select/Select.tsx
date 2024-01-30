@@ -78,10 +78,14 @@ export const Select: FunctionComponent<SelectProps> = (props) => {
       tabIndex={0} 
       className={styles.container}
     >
-      <span className={styles.value}>
-
-        {props.multiple ? (props.value.length !== 0 ? props.value[props.value.length - 1].label : "------") : props.value?.label}
-        </span>
+      <div className={styles.value}>
+        {props.multiple ? 
+          (props.value.length !== 0 ? props.value[props.value.length - 1].label : 
+            <span className={styles["empty-select"]}>No bestie yet</span>
+            ) : (
+              props.value ? props.value.label : <span className={styles["empty-select"]}>No animal totem selected</span>)
+        }
+        </div>
       <button 
         onClick={e => {
           e.stopPropagation()

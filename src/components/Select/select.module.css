@@ -28,6 +28,10 @@
     flex-wrap: wrap;
 }
 
+.empty-select {
+    color: #534a75;
+}
+
 .clear-btn {
     background: none;
     color: #DFDCE4;
