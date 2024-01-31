@@ -26,9 +26,10 @@
   background-color: #2A243D;
   padding: 2em 3em;
   border-radius: .5em;
-  min-height: 260px;
   height: auto;
   overflow-y: visible;
+  width: 100%;
+  max-width: 30em;
 }
 
 .heading {

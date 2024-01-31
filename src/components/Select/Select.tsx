@@ -61,10 +61,10 @@ export const Select: FunctionComponent<SelectProps> = (props) => {
       }
     }
 
-    containerRef.current?.addEventListener("keydown", handler)
+    containerRef.current?.addEventListener("keyup", handler)
 
     return () => {
-      containerRef.current?.removeEventListener("keydown", handler)
+      containerRef.current?.removeEventListener("keyup", handler)
     }
   }, [isOpen, hightlightedIndex, props.options])
 
@@ -87,7 +87,7 @@ export const Select: FunctionComponent<SelectProps> = (props) => {
               props.value ? props.value.label : <span className={styles["empty-select"]}>No animal totem selected</span>)
         }
         </div>
-        
+
         {/* CLEAR BUTTON */}
         {props.multiple ? 
           (props.value.length !== 0 ? 
@@ -109,7 +109,7 @@ export const Select: FunctionComponent<SelectProps> = (props) => {
         }
         
       <div className={styles.divider}></div>
-      <div className={styles.caret}></div>
+      <div className={`${styles.caret} ${isOpen ? styles.dropdowned : ""}`}></div>
       
       {/* DROPDOWN */}
       <ul className={`${styles.options} ${isOpen ? styles.show : ""}`}>

@@ -29,4 +29,6 @@ export const options: SelectOption[] = [
     { label: "Turtle 🐢", value: 6 },
     { label: "Snake 🐍", value: 7 },
     { label: "Dolphin 🐬", value: 8},
+    { label: "Goat 🐐", value: 9},
+    { label: "T-Rex 🦖", value: 10}
 ]
