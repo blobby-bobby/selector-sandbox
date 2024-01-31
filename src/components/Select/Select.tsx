@@ -78,6 +78,7 @@ export const Select: FunctionComponent<SelectProps> = (props) => {
       tabIndex={0} 
       className={styles.container}
     >
+      {/* THE CONTENT OF THE INPUT */}
       <div className={styles.value}>
         {props.multiple ? 
           (props.value.length !== 0 ? props.value[props.value.length - 1].label : 
@@ -86,14 +87,31 @@ export const Select: FunctionComponent<SelectProps> = (props) => {
               props.value ? props.value.label : <span className={styles["empty-select"]}>No animal totem selected</span>)
         }
         </div>
-      <button 
-        onClick={e => {
-          e.stopPropagation()
-          clearOptions()
-          }} 
-        className={styles["clear-btn"]}>&times;</button>
+        
+        {/* CLEAR BUTTON */}
+        {props.multiple ? 
+          (props.value.length !== 0 ? 
+          <button 
+            onClick={e => {
+              e.stopPropagation()
+              clearOptions()
+              }} 
+            className={styles["clear-btn"]}>&times;</button> : ""
+            ) : (
+              props.value ? 
+            <button 
+              onClick={e => {
+                e.stopPropagation()
+                clearOptions()
+                }} 
+              className={styles["clear-btn"]}>&times;</button> : ""
+          )
+        }
+        
       <div className={styles.divider}></div>
       <div className={styles.caret}></div>
+      
+      {/* DROPDOWN */}
       <ul className={`${styles.options} ${isOpen ? styles.show : ""}`}>
         {props.options.map((option, index) => (
           <li 
@@ -113,7 +131,7 @@ export const Select: FunctionComponent<SelectProps> = (props) => {
       </ul>
     </div>
 
-    {/* Multiple labels */}
+    {/* MULTIPLE LABELS */}
         <div className={`${styles.value} ${styles["multival-container"]}`}>
       {props.multiple ? props.value.map((val) => (
           <button 

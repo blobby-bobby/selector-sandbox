@@ -9,6 +9,7 @@
     padding: .5em;
     border-radius: .25em;
     outline: none;
+    cursor: pointer;
     
 }
 
@@ -30,6 +31,7 @@
 
 .empty-select {
     color: #534a75;
+    cursor: inherit;
 }
 
 .clear-btn {
@@ -113,6 +115,7 @@
     color: #DFDCE4;
     transition: all .2s ease;
     font-family: 'Manrope', sans-serif;
+    font-size: 1.05em;
 }
 
 .option-badge:hover, .option-badge:focus {
