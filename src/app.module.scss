@@ -14,10 +14,9 @@ ul {
 .fullpage {
   background-color: $purple-900;
   width: 100dvw;
-  height: 100dvh;
-  overflow-y: scroll;
+  min-height: 100dvh;
   display: flex;
-  gap: 4em;
+  gap: 1em;
   place-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -52,5 +51,6 @@ ul {
 @media (min-width: $desktop) {
   .fullpage {
     padding: 2em;
+    gap: 4em;
   }
 }
