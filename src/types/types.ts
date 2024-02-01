@@ -16,6 +16,10 @@ export type SingleSelectProps = {
   onChange: (value: SelectOption | undefined) => void
 }
 
+export type optionProps = {
+  options: SelectOption[];
+}
+
 export type SelectProps = {
     options: SelectOption[]
 } & (SingleSelectProps | MultipleSelectProps)

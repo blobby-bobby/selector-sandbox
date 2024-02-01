@@ -4,6 +4,7 @@
   import { Card } from "./components/Card/Card"
   import { SelectOption, options } from "./types/types"
   import styles from './app.module.scss'
+import { Range } from "./components/Range/Range"
 
   function App() {
 
@@ -36,6 +37,10 @@
 
         <Card title="Select your besties (checklist)">
           <Check options={options} />
+        </Card>
+
+        <Card title="Select your bestie (range)">
+          <Range options={options} />
         </Card>
         
       </main>

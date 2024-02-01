@@ -2,10 +2,9 @@
 
 .card {
     background-color: $purple-800;
-    padding: 2em 3em;
+    padding: 1em;
     border-radius: .5em;
     height: auto;
-    min-height: 300px;
     overflow-y: visible;
     width: 100%;
     max-width: 30em;
@@ -13,5 +12,17 @@
     &__title {
       font-weight: 500;
       margin-bottom: 1em;
+      font-size: 1.25em;
     }
+}
+
+@media (min-width: $desktop) {
+  .card {
+    min-height: 300px;
+    padding: 2em 3em;
+
+    &__title {
+      font-size: 1.5em;
+    }
+  }
 }

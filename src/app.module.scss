@@ -14,9 +14,10 @@ ul {
 .fullpage {
   background-color: $purple-900;
   width: 100dvw;
-  min-height: 100dvh;
+  height: 100dvh;
+  overflow-y: scroll;
   display: flex;
-  gap: 2em;
+  gap: 4em;
   place-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -24,7 +25,7 @@ ul {
   color: $whitecream-100;
   font-family: 'Manrope', sans-serif;
   font-weight: 300;
-  padding: 2em;
+  padding: 1em;
 }
 
 /* width */
@@ -46,4 +47,10 @@ ul {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: $pink-300;
+}
+
+@media (min-width: $desktop) {
+  .fullpage {
+    padding: 2em;
+  }
 }
