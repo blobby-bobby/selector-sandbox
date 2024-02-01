@@ -11,6 +11,10 @@ ul {
   list-style-type: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .fullpage {
   background-color: $purple-900;
   width: 100dvw;
@@ -25,6 +29,7 @@ ul {
   font-family: 'Manrope', sans-serif;
   font-weight: 300;
   padding: 1em;
+  overflow-x: hidden;
 }
 
 /* width */
@@ -34,12 +39,12 @@ ul {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: $purple-900;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $purple-900;
+  background: $purple-400;
   border-radius: 3px;
 }
 

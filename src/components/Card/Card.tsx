@@ -1,5 +1,5 @@
-import { FunctionComponent, ReactNode } from "react"
-import styles from './card.module.scss'
+import { FunctionComponent, ReactNode } from "react";
+import styles from './card.module.scss';
 
 type CardProps = {
     title?: string,
@@ -7,9 +7,14 @@ type CardProps = {
 }
 
 export const Card: FunctionComponent<CardProps> = (props) => {
+
+  if (!props.children) {
+    throw new Error("children prop is required");
+  }
+
   return (
     <section className={styles.card}>
-        <h2 className={styles["card__title"]}>{props.title}</h2>
+        {props.title ? <h2 className={styles["card__title"]}>{props.title}</h2> : ""}
 
         {props.children}
     </section>
