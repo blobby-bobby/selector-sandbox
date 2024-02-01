@@ -1,12 +1,8 @@
 import { FunctionComponent } from "react"
-import { SelectOption } from "../../types/types";
+import { optionProps } from "../../types/types";
 import styles from './check.module.scss'
 
-type CheckProps = {
-  options: SelectOption[];
-}
-
-export const Check: FunctionComponent<CheckProps> = (props) => {
+export const Check: FunctionComponent<optionProps> = (props) => {
   return (
   <ul className={styles.checklist}>
     {props.options.map(option => (
