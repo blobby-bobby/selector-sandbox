@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.checklist {
+    display: flex;
+    gap: .5em;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 200px;
+
+    &__item {
+        display: flex;
+        gap: .25em;
+        cursor: pointer;
+        max-width: max-content;
+        align-items: center;
+    }
+}
+
+input[type="checkbox"] {
+    width: 1.2em;
+    height: 1.2em;
+    accent-color: $pink-300;
+}
+
+label {
+    cursor: inherit;
+}

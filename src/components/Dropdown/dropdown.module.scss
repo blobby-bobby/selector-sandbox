@@ -1,8 +1,11 @@
+@import "../../styles/variables.scss";
+
 .container {
     position: relative;
-    width: 16em;
+    width: 100%;
+    max-width: 16em;
     min-height: 1.5em;
-    border: .05em solid #322C48;
+    border: .05em solid $purple-600;
     display: flex;
     align-items: center;
     gap: .5em;
@@ -10,10 +13,10 @@
     border-radius: .25em;
     outline: none;
     cursor: pointer;
-}
 
-.container:focus {
-    border-color: #5A4698;
+    &:focus {
+        border-color: $purple-500;
+    }
 }
 
 .value {
@@ -24,76 +27,74 @@
 }
 
 .empty-select {
-    color: #534a75;
+    color: $purple-400;
     cursor: inherit;
 }
 
 .clear-btn {
     background: none;
-    color: #DFDCE4;
+    color: $whitecream-100;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 1.15em;
     border-radius: 5em;
-    padding-top: .01em;
+    padding-top: 1px;
     width: 24px;
     height: 24px;
-    transition: all .2s ease;
-    background-color: #241F34;
+    background-color: $purple-900;
     align-self: flex-start;
     flex-shrink: 0;
-}
 
-.clear-btn:hover {
-    transform: scale(1.15);
-    font-size: 1.2em;
-    padding-top: 0;
-}
+    &:hover {
+        transform: scale(1.05);
+        font-size: 1.2em;
+        padding-top: 0px;
+        background-color: $pink-300;
+    }
 
-.clear-btn:focus, .clear-btn:hover {
-    background-color: #cb3750;
+    &:focus {
+        background-color: $pink-300;
+    }
 }
 
 .divider {
-    background-color: #322C48;
+    background-color: $purple-600;
     width: .05em;
     align-self: stretch;
 }
 
 .caret {
     border: .25em solid transparent;
-    border-top-color: #DFDCE4;
+    border-top-color: $whitecream-100;
     translate: 0 25%;
     height: 5px;
     transition: all .15s ease-in-out;
-}
 
-.caret.dropdowned {
+    &.dropdowned {
     transform: rotate(180deg);
     translate: 0 -25%;
+    }
 }
 
 .options {
     margin: 0;
     padding: .5em;
-    list-style: none;
     display: none;
     overflow-y: auto;
-    border: .05em solid #302947;
+    border: .05em solid $purple-700;
     border-radius: .25em;
     width: 100%;
     left: 0;
     top: calc(100% + .25em);
     position: absolute;
-    background-color: #302947;
+    background-color: $purple-700;
     z-index: 100;
-    /* max-height: 260px; */
-    box-shadow: 5px 6px 12px #241F34;
-}
+    box-shadow: 5px 6px 12px $purple-900;
 
-.options.show {
-    display: block;
+    &.show {
+        display: block;
+    }
 }
 
 .option {
@@ -101,21 +102,25 @@
     cursor: pointer;
     border-radius: .15em;
     transition: all .1s ease;
+
+    &.highlighted {
+        background-color: $purple-800;
+        transform: scale(1.03);
+    }
+
+    &.selected {
+        background-color: $purple-900;
+    }
 }
 
-.option.highlighted {
-    background-color: #2A243D;
-    transform: scale(1.03);
-}
 
-.option.selected {
-    background-color: #201b30;
-}
-
-.multival-container {
+.badges-container {
     padding: 1rem 0;
     width: 100%;
     min-height: 6em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
 }
 
 .option-badge {
@@ -126,15 +131,15 @@
     gap: .25em;
     padding: .25em .5em;
     cursor: pointer;
-    background-color: #D24F7D;
+    background-color: $pink-300;
     outline: none;
-    color: #DFDCE4;
+    color: $whitecream-100;
     transition: all .2s ease;
     font-family: 'Manrope', sans-serif;
     font-size: 1em;
     max-height: 2em;
-}
 
-.option-badge:hover, .option-badge:focus {
-    background-color: #cb3750;
+    &:focus, &:hover {
+        background-color: $pink-500;
+    }
 }

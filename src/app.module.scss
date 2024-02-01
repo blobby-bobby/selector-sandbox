@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500&display=swap');
+@import './styles/variables.scss';
 
 * {
   margin: 0;
@@ -6,35 +7,24 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .fullpage {
-  background-color: #241F34;
+  background-color: $purple-900;
   width: 100dvw;
-  height: 100dvh;
+  min-height: 100dvh;
   display: flex;
   gap: 2em;
   place-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
   font-size: 1.15em;
-  color: #DFDCE4;
+  color: $whitecream-100;
   font-family: 'Manrope', sans-serif;
   font-weight: 300;
   padding: 2em;
-}
-
-.section {
-  background-color: #2A243D;
-  padding: 2em 3em;
-  border-radius: .5em;
-  height: auto;
-  overflow-y: visible;
-  width: 100%;
-  max-width: 30em;
-}
-
-.heading {
-  font-weight: 500;
-  margin-bottom: 1em;
 }
 
 /* width */
@@ -49,11 +39,11 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #241F34;
+  background: $purple-900;
   border-radius: 3px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #D24F7D;
+  background: $pink-300;
 }
