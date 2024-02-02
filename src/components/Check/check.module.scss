@@ -20,6 +20,10 @@
             background-color: $purple-700;
             transform: scale(1.03);
         }
+
+        &.checked {
+            background-color: $purple-900;
+        }
     }
 }
 
