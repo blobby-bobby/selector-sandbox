@@ -9,13 +9,21 @@
     &__item {
         display: flex;
         gap: .25em;
+        padding: .2em .4em;
         cursor: pointer;
         max-width: max-content;
         align-items: center;
+        border-radius: .25em;
+        background-color: transparent;
+
+        &:hover {
+            background-color: $purple-700;
+            transform: scale(1.03);
+        }
     }
 }
 
-input[type="checkbox"] {
+.checkbox[type="checkbox"] {
     width: 1.2em;
     height: 1.2em;
     accent-color: $pink-300;
@@ -24,8 +32,12 @@ input[type="checkbox"] {
     border-radius: 3px;
 }
 
-input[type="checkbox"]:checked:hover, input[type="checkbox"]:focus {
+.checkbox:checked:hover, .checkbox:focus {
     background-color: $pink-500;
+}
+
+.checkbox:checked + .checklist__item {
+    background-color: $purple-900;
 }
 
 label {
@@ -35,6 +47,6 @@ label {
 
 @media (min-width: $mobile) {
     .checklist {
-        max-height: 200px;
+        max-height: 220px;
     }
 }

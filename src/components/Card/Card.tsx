@@ -9,7 +9,7 @@ type CardProps = {
 export const Card: FunctionComponent<CardProps> = (props) => {
 
   if (!props.children) {
-    throw new Error("children prop is required");
+    console.error("children prop is required");
   }
 
   return (

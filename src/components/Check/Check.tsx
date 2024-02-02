@@ -8,7 +8,6 @@ export const Check: FunctionComponent<optionProps> = (props) => {
     {props.options.map(option => (
       <li key={option.value} className={styles["checklist__item"]}>
         <input type="checkbox" id={option.label} name={option.label} className={styles.checkbox} />
-        <span className="checkmark"></span>
         <label htmlFor={option.label}>{option.label}</label>
       </li>
     ))}
