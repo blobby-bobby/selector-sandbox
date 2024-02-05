@@ -22,7 +22,7 @@ export const Range: FunctionComponent<optionProps> = (props) => {
             {props.options[value].label}
             </output>
       </div>
-
+      <label htmlFor="range"></label>
       <input type="range" name="range" id="range" 
             min="0" max={props.options.length - 1}
             className={styles["ranger__range"]} 
