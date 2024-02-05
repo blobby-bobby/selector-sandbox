@@ -84,7 +84,7 @@
             (props.value.length !== 0 ? props.value[props.value.length - 1].label : 
               <span className={styles["empty-select"]}>No bestie yet</span>
               ) : (
-                props.value ? props.value.label : <span className={styles["empty-select"]}>No animal totem selected</span>)
+                props.value ? props.value.label : <span className={styles["empty-select"]}>No bestie selected</span>)
           }
           </div>
 
